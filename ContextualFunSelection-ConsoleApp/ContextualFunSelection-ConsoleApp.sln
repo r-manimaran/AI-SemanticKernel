@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36121.58 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContextualFunSelection", "ContextualFunSelection\ContextualFunSelection.csproj", "{286DE958-FB9C-4FBA-A9DB-D81CE702B883}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{286DE958-FB9C-4FBA-A9DB-D81CE702B883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{286DE958-FB9C-4FBA-A9DB-D81CE702B883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{286DE958-FB9C-4FBA-A9DB-D81CE702B883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{286DE958-FB9C-4FBA-A9DB-D81CE702B883}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7C9B85E-D409-42F6-873D-6C9A8E027F3F}
+	EndGlobalSection
+EndGlobal
