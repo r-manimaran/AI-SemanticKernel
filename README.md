@@ -1,5 +1,5 @@
 # AI-SemanticKernel
 projects using Dotnet Semantic Kernel 
-Name:
+- Name: Contextual Function Selection
 Project Url:
-Description:
+Description:Perform Contextual function selection
