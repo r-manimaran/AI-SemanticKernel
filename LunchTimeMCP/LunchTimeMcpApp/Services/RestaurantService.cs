@@ -1,4 +1,5 @@
 ﻿using LunchTimeMcpApp.Models;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,11 @@ public class RestaurantService : IRestaurantService
     private readonly string dataFilePath;
     private List<Restaurant> restaurants = new();
     private Dictionary<string, int> visitCounts = new();
+    private readonly ILogger<RestaurantService> _logger;
 
-    public RestaurantService()
+    public RestaurantService(ILogger<RestaurantService> logger)
     {
+        _logger = logger;
         var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         var appDir = Path.Combine(appDataPath, "LunchTimeMcpApp");
         if (!Directory.Exists(appDir))
@@ -62,6 +65,7 @@ public class RestaurantService : IRestaurantService
 
         try
         {
+            _logger.LogInformation("Loading restaurants from {DataFilePath}", dataFilePath);
             var json = File.ReadAllText(dataFilePath);
             var loadedRestaurants = JsonSerializer.Deserialize(json, RestaurantContext.Default.RestaurantData);
 
@@ -75,6 +79,7 @@ public class RestaurantService : IRestaurantService
         catch (Exception ex)
         {
             Console.WriteLine($"Error loading restaurants: {ex.Message}");
+            _logger.LogError(ex, "Failed to load restaurants from {DataFilePath}", dataFilePath);
         }
     }
 
@@ -114,6 +119,7 @@ public class RestaurantService : IRestaurantService
     // Operations methods
     public async Task<List<Restaurant>> GetRestaurantsAsync()
     {
+        _logger.LogInformation("Retrieving all restaurants");
         return await Task.FromResult(restaurants.ToList());
     }
 
@@ -155,13 +161,15 @@ public class RestaurantService : IRestaurantService
         var selectedRestaurant = restaurants[index];
 
         // Increment visit count
-        if (visitCounts.ContainsKey(selectedRestaurant.Name))
+        if (visitCounts.ContainsKey(selectedRestaurant.Id.ToString()))
         {
-            visitCounts[selectedRestaurant.Name]++;
+            visitCounts[selectedRestaurant.Id.ToString()]++;
+            _logger.LogInformation("Incremented visit count for restaurant {RestaurantId}", selectedRestaurant.Id);
         }
         else
         {
-            visitCounts[selectedRestaurant.Name] = 1;
+            visitCounts[selectedRestaurant.Id.ToString()] = 1;
+            _logger.LogInformation("Initialized visit count for restaurant {RestaurantId}", selectedRestaurant.Id);
         }
         SaveData();
         return await Task.FromResult(selectedRestaurant);
@@ -173,7 +181,7 @@ public class RestaurantService : IRestaurantService
 
         foreach (var restaurant in restaurants)
         {
-            var visitCount = visitCounts.GetValueOrDefault(restaurant.Name, 0);
+            var visitCount = visitCounts.GetValueOrDefault(restaurant.Id.ToString(), 0);
             stats[restaurant.Name] = new RestaurantVisitInfo
             {
                 Restaurant = restaurant,

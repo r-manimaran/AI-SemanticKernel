@@ -66,7 +66,7 @@ public sealed class RestaurantTools
     [McpServerTool, Description("Get the statistics about how many times each restaurant has been visited.")]
     public async Task<string> GetVisitStatistics()
     {
-        var formattedStats =await _restaurantService.GetFormattedVisitStatsAsync();
+        var formattedStats = await _restaurantService.GetFormattedVisitStatsAsync();
         return JsonSerializer.Serialize(formattedStats, RestaurantContext.Default.FormattedRestaurantStats);
     }
 }

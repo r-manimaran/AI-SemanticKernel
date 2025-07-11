@@ -37,3 +37,5 @@ A Model Context Protocol (MCP) server for managing restaurant lunch options. Bui
 Restaurant data is stored in: `%APPDATA%\LunchTimeMcpApp\restaurants.json`
 
 The server comes pre-loaded with Indian restaurants in the Raleigh-Durham area.
+
+![alt text](image-12.png)
