@@ -1,0 +1,42 @@
+﻿@page "/"
+
+@using BlazorHybridSearchApp.Services
+@inject IDataService DataService
+<PageTitle>Home</PageTitle>
+
+<Loader Loading="@loading">
+    <div style="display: flex; flex-direction:row;gap:20px;margin: 20px;">
+        <InputTextArea @bind-Value=query style="width: 400px;height:50px;"></InputTextArea>
+        <button @onclick="Search" style="height:100%;">Search</button>
+    </div>
+    <div style="width: 50%">
+        @searchingMsg
+
+        <ul>
+            @foreach(var r in searchResult)
+            {
+                <li>@r</li>
+            }
+        </ul>
+    </div>
+</Loader>
+
+@code {
+
+    private string query = "";
+    private string searchingMsg = "";
+    private List<string> searchResult = [];
+    private bool loading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await DataService.LoadData("wwwroot/Data/restaurant.json").ContinueWith(_ => loading = false);
+    }
+
+    public async Task Search()
+    {
+        searchingMsg = "Please wait";
+        searchResult = await DataService.GetRestaurantInfo(query);
+        searchingMsg = "";
+    }
+}

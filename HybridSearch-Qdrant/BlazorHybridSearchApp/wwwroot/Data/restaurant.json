@@ -1,0 +1,148 @@
+
+  [
+    {
+      "name": "Curry Leaf Indian Restaurant",
+      "description": "A modern Indian eatery in Raleigh, Curry Leaf offers a vibrant menu of classic curries, tandoori specialties, and fresh naan, all served in a casual, welcoming setting perfect for families and friends.",
+      "location": "1001 Oberlin Rd, Raleigh, NC",
+      "features": "Ocean-front, free Wifi, Pet friendly",
+      "best_customer_review": "Top-notch quality and great variety on the menu.",
+      "worst_customer_review": "The ambiance was noisy and uncomfortable."
+    },
+    {
+      "name": "Tamarind Indian Cuisine",
+      "description": "Known for its authentic North and South Indian dishes, Tamarind Indian Cuisine is a favorite for its flavorful biryanis, dosas, and a wide selection of vegetarian and vegan options. The warm, contemporary atmosphere makes it ideal for both casual dining and special occasions.",
+      "location": "3011 Hillsborough St, Raleigh, NC",
+      "features": "Family-friendly, Vegan options, Outdoor seating",
+      "best_customer_review": "The best Indian food I've had in the area. Friendly staff and great ambiance.",
+      "worst_customer_review": "The ambiance was noisy and uncomfortable."
+    },
+    {
+      "name": "Chola Indian Cuisine",
+      "description": "Chola Indian Cuisine brings the rich flavors of India to Raleigh with a menu that highlights regional specialties and chef-inspired creations. Its inviting decor and live music nights make it a unique spot for food lovers.",
+      "location": "1001 Wade Ave, Raleigh, NC",
+      "features": "Live music, Gluten-free options, Wheelchair accessible",
+      "best_customer_review": "A hidden gem with amazing spices and perfect cooking.",
+      "worst_customer_review": "Overpriced for the quality offered. Not worth the visit."
+    },
+    {
+      "name": "Sitar Indian Cuisine",
+      "description": "Sitar is a Raleigh staple serving up classic Indian comfort food in a cozy, intimate setting. The menu features a range of curries, tandoori dishes, and freshly baked breads, with attentive service and convenient parking.",
+      "location": "1001 Wake Forest Rd, Raleigh, NC",
+      "features": "Cozy ambiance, Takeout available, Parking available",
+      "best_customer_review": "Absolutely loved the flavors and the authentic taste! Highly recommend.",
+      "worst_customer_review": "The food was bland and lacked the authentic taste."
+    },
+    {
+      "name": "Biryani Pot",
+      "description": "Biryani Pot in Durham is renowned for its aromatic biryanis and flavorful curries, offering a romantic setting with craft cocktails and late-night hours for those craving authentic Indian cuisine after dark.",
+      "location": "123 Main St, Durham, NC",
+      "features": "Romantic setting, Craft cocktails, Late night service",
+      "best_customer_review": "Exceptional service and delicious dishes. Will definitely come back!",
+      "worst_customer_review": "The ambiance was noisy and uncomfortable."
+    },
+    {
+      "name": "Taste of India",
+      "description": "Taste of India in Cary is a casual dining destination with a diverse menu, including a popular kids menu and plenty of free parking. It's a go-to spot for families looking for hearty, flavorful Indian meals.",
+      "location": "456 Elm St, Cary, NC",
+      "features": "Casual dining, Kids menu, Free parking",
+      "best_customer_review": "Absolutely loved the flavors and the authentic taste! Highly recommend.",
+      "worst_customer_review": "The food was bland and lacked the authentic taste."
+    },
+    {
+      "name": "Swagat Indian Cuisine",
+      "description": "Swagat Indian Cuisine in Morrisville offers a modern twist on traditional Indian fare. With a stylish interior, happy hour specials, and a menu full of crowd-pleasers, it's a great choice for both lunch and dinner.",
+      "location": "9549 Chapel Hill Rd, Morrisville, NC 27560",
+      "features": "Modern decor, Happy hour, Reservation recommended",
+      "best_customer_review": "Top-notch quality and great variety on the menu.",
+      "worst_customer_review": "Had to wait too long for the food, and it was cold when served."
+    },
+    {
+      "name": "BLR Bar & Curry",
+      "description": "BLR Bar & Curry specializes in authentic Indian and vegetarian cuisine, offering a BYOB policy and group seating for parties and gatherings. The lively atmosphere makes it a popular spot for celebrations.",
+      "location": "10970 Chapel Hill Rd, Morrisville, NC 27560",
+      "features": "Authentic cuisine, BYOB, Group seating",
+      "best_customer_review": "Exceptional service and delicious dishes. Will definitely come back!",
+      "worst_customer_review": "Service was slow and the staff seemed uninterested."
+    },
+    {
+      "name": "Triangles Biryani Indian Restaurant",
+      "description": "Triangles Biryani in Morrisville is known for its fast service and affordable prices. With a focus on biryanis and classic Indian street food, it's a favorite for quick lunches and convenient delivery.",
+      "location": "4121 Davis Dr, Morrisville, NC 27560",
+      "features": "Fast service, Affordable prices, Delivery available",
+      "best_customer_review": "Absolutely loved the flavors and the authentic taste! Highly recommend.",
+      "worst_customer_review": "The food was bland and lacked the authentic taste."
+    },
+    {
+      "name": "Naga's South Indian Cuisine",
+      "description": "Naga's South Indian Cuisine brings traditional recipes and a cozy atmosphere to Morrisville. The friendly staff and authentic dosas, idlis, and sambar make it a must-visit for lovers of South Indian food.",
+      "location": "1000 Lower Shiloh Way, Morrisville, NC 27560",
+      "features": "Traditional recipes, Friendly staff, Cozy atmosphere",
+      "best_customer_review": "Exceptional service and delicious dishes. Will definitely come back!",
+      "worst_customer_review": "The food was bland and lacked the authentic taste."
+    },
+    {
+      "name": "JP's Biryani",
+      "description": "JP's Biryani is a hotspot for those seeking spicy dishes, a well-stocked buffet, and catering services for events. Their signature biryani is a local favorite.",
+      "location": "9625 Chapel Hill Rd, Morrisville, NC 27560",
+      "features": "Spicy dishes, Buffet, Catering services",
+      "best_customer_review": "Exceptional service and delicious dishes. Will definitely come back!",
+      "worst_customer_review": "The ambiance was noisy and uncomfortable."
+    },
+    {
+      "name": "Royale Curry",
+      "description": "Royale Curry in Cary is a vegetarian-friendly restaurant using organic ingredients and offering a relaxing environment for diners looking for healthy, flavorful Indian cuisine.",
+      "location": "990 High House Rd, Cary, NC 27513",
+      "features": "Vegetarian friendly, Organic ingredients, Relaxing environment",
+      "best_customer_review": "A hidden gem with amazing spices and perfect cooking.",
+      "worst_customer_review": "The food was bland and lacked the authentic taste."
+    },
+    {
+      "name": "Cilantro Indian Café",
+      "description": "A family-owned, award-winning restaurant, Cilantro Indian Café serves a seasonal menu of Indian favorites. Its friendly service and cozy setting make it a local favorite.",
+      "location": "9424 Chapel Hill Rd, Cary, NC 27513",
+      "features": "Family-owned, Award-winning, Seasonal menu",
+      "best_customer_review": "Absolutely loved the flavors and the authentic taste! Highly recommend.",
+      "worst_customer_review": "Had to wait too long for the food, and it was cold when served."
+    },
+    {
+      "name": "Saffron Indian Cuisine",
+      "description": "Saffron Indian Cuisine offers pet-friendly outdoor patio seating and live sports on TV, making it a great spot for both foodies and sports fans in Cary.",
+      "location": "1135 Kildaire Farm Rd, Cary, NC 27511",
+      "features": "Pet friendly, Outdoor patio, Live sports",
+      "best_customer_review": "Top-notch quality and great variety on the menu.",
+      "worst_customer_review": "The ambiance was noisy and uncomfortable."
+    },
+    {
+      "name": "Naan House Indian Bistro",
+      "description": "Naan House Indian Bistro in Apex is dedicated to comfort food made with local ingredients. With daily specials and a welcoming vibe, it’s perfect for a casual meal or a quick bite.",
+      "location": "5460 Apex Peakway, Apex, NC 27502",
+      "features": "Comfort food, Local ingredients, Daily specials",
+      "best_customer_review": "Exceptional service and delicious dishes. Will definitely come back!",
+      "worst_customer_review": "Overpriced for the quality offered. Not worth the visit."
+    },
+    {
+      "name": "Bawarchi Grill & Spirits",
+      "description": "Bawarchi Grill & Spirits offers upscale Indian dining in Apex, featuring an extensive wine list, private dining rooms, and a menu that balances traditional flavors with modern flair.",
+      "location": "800 W Williams St #176, Apex, NC 27502",
+      "features": "Upscale dining, Extensive wine list, Private dining",
+      "best_customer_review": "Absolutely loved the flavors and the authentic taste! Highly recommend.",
+      "worst_customer_review": "The ambiance was noisy and uncomfortable."
+    },
+    {
+      "name": "Chhote's Indian Street Food",
+      "description": "Chhote's Indian Street Food in Garner serves up classic Indian street snacks and quick bites in a casual, lively setting. Free WiFi and a late-night menu make it a popular hangout.",
+      "location": "1155 Timber Dr E, Garner, NC 27529",
+      "features": "Casual atmosphere, Late night menu, Free WiFi",
+      "best_customer_review": "A hidden gem with amazing spices and perfect cooking.",
+      "worst_customer_review": "Had to wait too long for the food, and it was cold when served."
+    },
+    {
+      "name": "Sangam Mart",
+      "description": "Sangam Mart is a budget-friendly Indian eatery and market in Morrisville, known for its spicy street food, quick service, and convenient location for a fast, delicious meal.",
+      "location": "10300 Chapel Hill Rd Ste 600, Morrisville, NC 27560",
+      "features": "Street food, Quick bites, Budget-friendly",
+      "best_customer_review": "Top-notch quality and great variety on the menu.",
+      "worst_customer_review": "Had to wait too long for the food, and it was cold when served."
+    }
+  ]
+

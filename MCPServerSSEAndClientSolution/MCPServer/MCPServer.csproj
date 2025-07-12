@@ -11,4 +11,8 @@
     <PackageReference Include="ModelContextProtocol.AspNetCore" Version="0.3.0-preview.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MCPServerSSEAndClientSolution.ServiceDefaults\MCPServerSSEAndClientSolution.ServiceDefaults.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -3,7 +3,26 @@ using ModelContextProtocol.Protocol;
 
 var builder = WebApplication.CreateBuilder(args);
 
-McpClientOptions mcpOptions = new()
+builder.AddServiceDefaults();
+
+builder.Services.AddTransient<Task<IMcpClient>>(sp =>
+{
+    var loggerFactory = sp.GetRequiredService<ILoggerFactory>();
+
+    McpClientOptions mcpOptions = new()
+    {
+        ClientInfo = new() { Name = "WebApiCLient", Version = "1.0.0" }
+    };
+    var name = "services__mcpserver__http__0";
+    var url = Environment.GetEnvironmentVariable(name);
+
+    SseClientTransport ct = new(new() { Endpoint = new Uri(url?? ""), Name = "SseTransport" });
+
+    return McpClientFactory.CreateAsync(ct, mcpOptions, loggerFactory);
+
+});
+/*
+ * McpClientOptions mcpOptions = new()
 {
     ClientInfo = new() { Name = "WebApiClient", Version = "1.0.0" }
 };
@@ -11,8 +30,11 @@ McpClientOptions mcpOptions = new()
 SseClientTransport ct = new(new() { Endpoint = new Uri("https://localhost:7182"), Name="SseTransport" });
 
 builder.Services.AddTransient<Task<IMcpClient>>((sp) => {  return McpClientFactory.CreateAsync(ct, mcpOptions); });
+*/
 
 var app = builder.Build();
+
+app.MapDefaultEndpoints();
 
 app.UseHttpsRedirection();
 
