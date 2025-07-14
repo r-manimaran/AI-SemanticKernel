@@ -7,7 +7,6 @@ namespace WebApi.Endpoints
 {
     public static class RAGEndpoints
     {
-
         public static void MapRAGEndpoints(this IEndpointRouteBuilder route)
         {
             var app = route.MapGroup("/api/rag").WithOpenApi();

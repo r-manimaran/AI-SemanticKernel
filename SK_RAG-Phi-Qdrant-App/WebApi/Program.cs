@@ -7,6 +7,7 @@ using WebApi.Endpoints;
 using WebApi.Infrastructure;
 using WebApi.Services;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
@@ -44,20 +45,28 @@ switch (llmType)
             
         case LLMType.AZUREOPENAI:
             return Kernel.CreateBuilder()
-                .AddAzureOpenAIChatCompletion("gpt-4", configuration["AzureOpenAI:Endpoint"] ?? "https://your-endpoint.openai.azure.com/", configuration["AzureOpenAI:ApiKey"] ?? "YourApiKeyHere")
+                .AddAzureOpenAIChatCompletion("gpt-4o-mini", configuration["AzureOpenAI:Endpoint"] ?? "https://your-endpoint.openai.azure.com/", configuration["AzureOpenAI:ApiKey"] ?? "YourApiKeyHere")
                 .AddAzureOpenAIEmbeddingGenerator("text-embedding-3-small", configuration["AzureOpenAI:Endpoint"] ?? "https://your-endpoint.openai.azure.com/", configuration["AzureOpenAI:ApiKey"] ?? "YourApiKeyHere")
                 .Build();
             
         case LLMType.GITHUB:
             var client = new OpenAIClient(new ApiKeyCredential(configuration["GithubModel:AccessToken"] ?? ""), new OpenAIClientOptions  
             {
-                Endpoint = new Uri(configuration["GithubModel:Endpoint"] ?? "https://api.github.com")
+                Endpoint = new Uri(configuration["GithubModel:Endpoint"] ?? "https://models.inference.ai.azure.com")
             });
             return Kernel.CreateBuilder()
-                .AddOpenAIChatCompletion("gpt-4", client)
+                .AddOpenAIChatCompletion("Phi-3.5-mini-instruct", client)
                 .AddOpenAIEmbeddingGenerator("text-embedding-3-small", client)
                 .Build();
 
+        case LLMType.ONNX:
+            var modelPath = configuration["OnnxModelPath"] ?? @"C:\ai-models\phi-3\models\Phi-3-mini-4k-instruct-onnx\cpu_and_mobile\cpu-int4-awq-block-128";
+            return Kernel.CreateBuilder()
+                        .AddOnnxRuntimeGenAIChatCompletion("phi-3-mini",modelPath)
+                        .AddBertOnnxEmbeddingGenerator(
+                                 onnxModelPath: @"C:\ai-models\bge-micro-v2\onnx\model.onnx",
+                                 vocabPath: @"C:\ai-models\bge-micro-v2\vocab.txt")
+                       .Build();
         //case LLMType.OLLAMA:
         //    return Kernel.CreateBuilder()
         //            .AddOllamaChatCompletion("gpt-3.5-turbo", "http://localhost:11434")
@@ -66,9 +75,7 @@ switch (llmType)
         //    break;
         default:
             throw new NotSupportedException($"LLMType '{llmType}' is not supported.");
-
-    }
-    
+    }    
 });
 
 builder.Services.AddSingleton<IEmbeddingGenerator<string, Embedding<float>>>(sp =>
