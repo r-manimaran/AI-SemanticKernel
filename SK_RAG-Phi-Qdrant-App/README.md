@@ -66,3 +66,7 @@ Set the LLM provider in `appsettings.json`:
 
 ### Github Model
 ![alt text](image-2.png)
+
+## License
+
+This project is for educational purposes demonstrating Semantic Kernel structured output capabilities.
