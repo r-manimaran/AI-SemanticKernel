@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/MoviesApp/bin/Debug/net9.0/MoviesApp.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/MoviesApp",
+            "env": {
+                "OpenAI__ApiKey": "yourapikeyhere"
+            }
+        }
+    ]
+}
