@@ -1,7 +1,5 @@
 # Semantic Kernel Structured Output Demo
 
-![Structured Output](image.png)
-
 A .NET console application demonstrating how to use Microsoft Semantic Kernel to generate structured JSON responses from OpenAI or Azure OpenAI GPT models.
 
 ## Features
