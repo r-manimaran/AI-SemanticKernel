@@ -66,3 +66,8 @@ dotnet run
 - **Endpoint**: http://localhost:5273/v1
 - **Temperature**: 0.7
 - **Max Tokens**: 32,768
+
+
+## License
+
+This project is for educational purposes demonstrating Semantic Kernel structured output capabilities.
