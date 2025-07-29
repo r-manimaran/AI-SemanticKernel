@@ -12,9 +12,9 @@ public class OpenAIConfig
     private static readonly IConfigurationRoot configuration;
     static OpenAIConfig()
     {
-        configuration = new ConfigurationBuilder()
-             .AddUserSecrets<OpenAIConfig>()
+        configuration = new ConfigurationBuilder()             
              .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+             .AddUserSecrets<OpenAIConfig>()
              .Build();
 
     }

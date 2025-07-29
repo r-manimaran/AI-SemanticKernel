@@ -17,13 +17,13 @@ public class AzureConfig
 
         // Load configuration from appsettings.json and user secrets
         string filePath = Path.GetFullPath("appsettings.json");
-        configuration = new ConfigurationBuilder()
-                    .AddUserSecrets<AzureConfig>()
+        configuration = new ConfigurationBuilder()                    
                     .AddJsonFile(filePath)
+                    .AddUserSecrets<AzureConfig>()
                     .Build();
     }
 
-    public static string Endpoint => configuration["AzureOpenAI:Endpoint"] ?? "https://your-endpoint.openai.azure.com/";
-    public static string ApiKey => configuration["AzureOpenAI:ApiKey"] ?? "yourApiKey";
-    public static string DeploymentOrModelId => configuration["AzureOpenAI:DeploymentNameModelId"] ?? "gpt-35-turbo"; // Default model ID
+    public static string Endpoint => configuration["AzureOpenAIConfig:Endpoint"] ?? "https://your-endpoint.openai.azure.com/";
+    public static string ApiKey => configuration["AzureOpenAIConfig:ApiKey"] ?? "yourApiKey";
+    public static string DeploymentOrModelId => configuration["AzureOpenAIConfig:DeploymentOrModelId"] ?? "gpt-35-turbo"; // Default model ID
 }
