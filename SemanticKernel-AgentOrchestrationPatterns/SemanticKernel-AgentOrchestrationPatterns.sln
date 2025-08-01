@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SequentialPattern", "Sequen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseKernel", "BaseKernel\BaseKernel.csproj", "{F9B578B5-1C2B-437E-8AD2-60CFCAE24098}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupPattern", "GroupPattern\GroupPattern.csproj", "{CDEF4BA7-70CB-4593-93CA-DE578BB98B39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrentPattern", "ConcurrentPattern\ConcurrentPattern.csproj", "{FE51B621-BEE4-4409-A74B-6469032B251B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{F9B578B5-1C2B-437E-8AD2-60CFCAE24098}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9B578B5-1C2B-437E-8AD2-60CFCAE24098}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9B578B5-1C2B-437E-8AD2-60CFCAE24098}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDEF4BA7-70CB-4593-93CA-DE578BB98B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDEF4BA7-70CB-4593-93CA-DE578BB98B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDEF4BA7-70CB-4593-93CA-DE578BB98B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDEF4BA7-70CB-4593-93CA-DE578BB98B39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE51B621-BEE4-4409-A74B-6469032B251B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE51B621-BEE4-4409-A74B-6469032B251B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE51B621-BEE4-4409-A74B-6469032B251B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE51B621-BEE4-4409-A74B-6469032B251B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
