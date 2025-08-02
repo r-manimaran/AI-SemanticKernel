@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36221.1 d17.14
+VisualStudioVersion = 17.14.36221.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SequentialPattern", "SequentialPattern\SequentialPattern.csproj", "{4ACDF519-7E40-4F3A-A190-52275EF5E3A4}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupPattern", "GroupPattern\GroupPattern.csproj", "{CDEF4BA7-70CB-4593-93CA-DE578BB98B39}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrentPattern", "ConcurrentPattern\ConcurrentPattern.csproj", "{FE51B621-BEE4-4409-A74B-6469032B251B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandoffOrchestration", "HandoffOrchestration\HandoffOrchestration.csproj", "{BC02FD7C-28FC-4934-A868-37E0A1D2FC09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FE51B621-BEE4-4409-A74B-6469032B251B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE51B621-BEE4-4409-A74B-6469032B251B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE51B621-BEE4-4409-A74B-6469032B251B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC02FD7C-28FC-4934-A868-37E0A1D2FC09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC02FD7C-28FC-4934-A868-37E0A1D2FC09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC02FD7C-28FC-4934-A868-37E0A1D2FC09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC02FD7C-28FC-4934-A868-37E0A1D2FC09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
