@@ -1,0 +1,107 @@
+﻿@page "/aichat"
+@using Markdig
+@rendermode InteractiveServer
+@using Microsoft.Extensions.AI
+@using System.Text
+@inject IChatClient ChatClient
+
+<h3>AIChat</h3>
+
+<div class="chat-container">
+    <div class="chat-messages" @ref="messageContainer">
+        @foreach(var message in Messages)
+        {
+            <div class="message @(message.IsUser ? "user-message":"ai-message")">
+                @((MarkupString)Markdown.ToHtml(message.Content))
+            </div>
+        }
+    </div>
+    <div class="chat-input-area">
+        <input type="text" @bind="userInput" @bind:event="oninput" onkeyup="HandleKeyUp" placeholder="Type your message..." class="chat-input"/>
+
+        <button @onclick="SendMessage" class="send-button" disabled="@isStreaming">Send</button>
+    </div>
+</div>
+
+@code {
+    private MarkupString responseText;
+    private string userInput = string.Empty;
+    private ElementReference messageContainer;
+    private List<ChatMessageModel> Messages = new List<ChatMessageModel>();
+    private bool isStreaming = false;
+
+    private class ChatMessageModel
+    {
+        public string Content { get; set; }
+        public bool IsUser { get; set; }
+    }
+
+    private async Task SendMessage()
+    {
+        if (string.IsNullOrWhiteSpace(userInput) || isStreaming)
+            return;
+
+        Messages.Add(new ChatMessageModel
+        {
+            Content = userInput,
+            IsUser = true
+        });
+
+        var aiResponse = new StringBuilder();
+        var textResponse = string.Empty;
+        Messages.Add(new ChatMessageModel
+        {
+            Content = "Thinking...",
+            IsUser = false
+        });
+
+        try
+        {
+            isStreaming = true;
+
+            await foreach(var chunk in ChatClient.GetStreamingResponseAsync(new ChatMessage[]
+            {
+                new ChatMessage(ChatRole.User, userInput)
+            }, new ChatOptions
+            {
+                MaxOutputTokens = 10000,
+            }))
+    {
+                if(chunk?.Text !=null)
+                {
+                    textResponse += chunk.Text;
+                    aiResponse.Append(chunk.Text);
+                    Messages[^1].Content = aiResponse.ToString();
+                    await InvokeAsync(StateHasChanged);
+                    await ScrollToBottom();
+                }
+            }
+        }
+        catch(Exception ex)
+        {
+            Messages[^1].Content = $"Error: {ex.Message}";
+            await InvokeAsync(StateHasChanged);
+        }
+        finally
+        {
+            isStreaming = false;
+            userInput = string.Empty;
+            await ScrollToBottom();
+        }
+    }
+
+    private async Task ScrollToBottom()
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToBottom", messageContainer);
+    }
+
+    private async Task HandleKeyUp(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter" && !e.ShiftKey && !isStreaming)
+        {
+
+            await SendMessage();
+        }
+    }
+    [Inject] private IJSRuntime JSRuntime { get; set; }
+ }
