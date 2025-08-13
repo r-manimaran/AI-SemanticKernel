@@ -65,3 +65,27 @@ The application will:
 - ModelContextProtocol (0.3.0-preview.3)
 - ModelContextProtocol-SemanticKernel (0.3.0)
 - ModelContextProtocol.Core (0.3.0-preview.3)
+
+## Configure and test the hugging face mcp tools in VSCode
+
+1. Create a new folder .vscode
+2. Create a new file named mcp.json
+3. Add the following configuration:
+
+```json
+{
+  "servers": {
+    "hf-mcp-server": {
+      "url": "https://huggingface.co/mcp",
+      "headers": {
+        "Authorization": "Bearer <YOUR_HF_TOKEN>"
+      }
+    }
+  }
+}
+```
+4. Save and type the prompt in the copilot.
+![alt text](image-3.png)
+
+5. Generated image.
+![alt text](image-4.png)
