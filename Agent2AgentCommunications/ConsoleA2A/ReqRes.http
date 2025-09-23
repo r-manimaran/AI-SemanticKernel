@@ -1,0 +1,25 @@
+@baseUrl =http://localhost:5000
+###
+GET {{baseUrl}}/.well-known/agent.json
+
+###
+POST {{baseUrl}}
+Content-Type: application/json
+{
+    "id":"1",
+    "jsonrpc":"2.0",
+    "method":"message/send",
+    "params":{
+        "id":"1",
+        "message":{
+            "role":"user",
+            "messageId":"m1",
+            "parts":[
+                {
+                    "kind":"text",
+                    "text":"I want to know the details for the policy P1234"
+                }
+            ]
+        }
+    }
+}
