@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ClientApp-MicrosftAgentFramework/ClientApp-MicrosftAgentFramework.csproj" />
+  <Project Path="ClientApp/ClientApp.csproj" />
+  <Project Path="WebApi/WebApi.csproj" />
+</Solution>
