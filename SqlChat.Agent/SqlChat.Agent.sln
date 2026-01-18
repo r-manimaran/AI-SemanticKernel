@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36811.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlChat.Agent", "SqlChat.Agent\SqlChat.Agent.csproj", "{21880478-1465-413B-8CE3-2078CE6CDDE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21880478-1465-413B-8CE3-2078CE6CDDE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21880478-1465-413B-8CE3-2078CE6CDDE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21880478-1465-413B-8CE3-2078CE6CDDE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21880478-1465-413B-8CE3-2078CE6CDDE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF2FCE81-6FD4-45D5-865F-1F9C998ED8B8}
+	EndGlobalSection
+EndGlobal
