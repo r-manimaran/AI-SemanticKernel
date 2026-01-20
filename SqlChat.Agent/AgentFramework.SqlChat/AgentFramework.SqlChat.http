@@ -1,0 +1,6 @@
+@AgentFramework.SqlChat_HostAddress = http://localhost:5264
+
+GET {{AgentFramework.SqlChat_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
