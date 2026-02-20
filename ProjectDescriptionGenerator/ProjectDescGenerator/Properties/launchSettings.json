@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ProjectDescGenerator": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
