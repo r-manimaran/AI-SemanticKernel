@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="AgenticProjectDescGenerator/AgenticProjectDescGenerator.csproj" />
   <Project Path="ProjectDescGenerator/ProjectDescGenerator.csproj" />
 </Solution>
