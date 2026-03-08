@@ -40,3 +40,20 @@
 ![alt text](image-4.png)
 
 ![alt text](image-5.png)
+
+## Docker Desktop Tools
+
+![alt text](image-6.png)
+
+![alt text](image-7.png)
+
+![alt text](image-8.png)
+
+
+Here are some examples
+
+"Give me a summary of all my Docker containers"
+"Show me logs from my postgres container"
+"Which containers are currently stopped?"
+"Get CPU and memory usage for my api container"
+"Show details of the redis container including its mounts"
