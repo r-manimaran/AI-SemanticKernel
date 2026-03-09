@@ -1,4 +1,4 @@
-
+# MCP Server with Streamable Http 
 
 ![alt text](image.png)
 
@@ -43,6 +43,8 @@
 
 ## Docker Desktop Tools
 
+![alt text](image-9.png)
+
 ![alt text](image-6.png)
 
 ![alt text](image-7.png)
@@ -57,3 +59,11 @@ Here are some examples
 "Which containers are currently stopped?"
 "Get CPU and memory usage for my api container"
 "Show details of the redis container including its mounts"
+
+## Consume in Microsoft Agent Framework 
+
+![alt text](image-10.png)
+
+![alt text](image-11.png)
+
+![alt text](image-12.png)

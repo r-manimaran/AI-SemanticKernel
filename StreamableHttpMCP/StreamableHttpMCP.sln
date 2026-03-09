@@ -5,6 +5,10 @@ VisualStudioVersion = 17.14.36811.4 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "McpServer", "McpServer\McpServer.csproj", "{4081C5CC-8DC3-491D-9331-BD6AA05640E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentFrameworkMCPDockerTools", "AgentFrameworkMCPDockerTools\AgentFrameworkMCPDockerTools.csproj", "{F5BE7950-AC1C-4F09-8BF2-18236103FE14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseMcpServer", "DatabaseMcpServer\DatabaseMcpServer.csproj", "{57DB3BDF-25A6-4910-A819-ACA2CC5A0B72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{4081C5CC-8DC3-491D-9331-BD6AA05640E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4081C5CC-8DC3-491D-9331-BD6AA05640E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4081C5CC-8DC3-491D-9331-BD6AA05640E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5BE7950-AC1C-4F09-8BF2-18236103FE14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5BE7950-AC1C-4F09-8BF2-18236103FE14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5BE7950-AC1C-4F09-8BF2-18236103FE14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5BE7950-AC1C-4F09-8BF2-18236103FE14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57DB3BDF-25A6-4910-A819-ACA2CC5A0B72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57DB3BDF-25A6-4910-A819-ACA2CC5A0B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57DB3BDF-25A6-4910-A819-ACA2CC5A0B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57DB3BDF-25A6-4910-A819-ACA2CC5A0B72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
