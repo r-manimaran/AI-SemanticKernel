@@ -14,10 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="receipts\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="receipts\costco1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

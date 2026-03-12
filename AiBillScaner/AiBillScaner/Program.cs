@@ -8,6 +8,7 @@ var builder = Host.CreateApplicationBuilder();
 builder.Services
     .AddChatClient(new OllamaApiClient(
         new Uri("http://localhost:11434"),"llama3.2-vision:latest"));
+
 var app = builder.Build();
 
 var chatClient = app.Services.GetRequiredService<IChatClient>();
@@ -20,7 +21,8 @@ var message = new ChatMessage(ChatRole.User,
         Analyze the attached receipt image and extract the following details in a structured JSON format:
 
     GasStationName
-    Date and Time 
+    Date and Time
+    Pump
     Gallons Filled
     Price per Gallon
     Total Amount Spent
@@ -28,20 +30,21 @@ var message = new ChatMessage(ChatRole.User,
 
     Follow these rules strictly:
 
-    For Gallons Filled, only extract the numeric value that appears directly below to the label "Gallons".
+    Treat "Pump", "Gallons", and "Price" as column headers.
 
-    Ignore numbers that appear under "Pump" or other headings.
+    Extract Gallons Filled only from the value aligned under the "Gallons" column.
 
     Do NOT use column headers (e.g., "Pump", "Gallons", "Price") as values.
 
     Use spatial alignment and proximity to determine correct fields.
+
     Have the DateandTime field formatted as mm/dd/yy HH:MM
 
     If any field is missing, return it as null. Ensure values are accurate and formatted clearly.
 
     """);
 
-message.Contents.Add(new DataContent(File.ReadAllBytes("receipts/costco2.jpg"),"image/jpg"));
+message.Contents.Add(new DataContent(File.ReadAllBytes("receipts/costco3.jpg"),"image/jpg"));
 using var cts = new CancellationTokenSource(TimeSpan.FromMinutes(5));
 try
 {
@@ -63,6 +66,7 @@ public class Receipt
 {
     public string GasStationName {  get; set; }
     public string DateTime { get; set; }
+    public int Pump { get; set; }
     public decimal GallonsFilled { get; set; }
     public decimal Price { get; set; }
     public decimal TotalAmount { get; set; }
