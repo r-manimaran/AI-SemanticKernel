@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentFrameworkMCPDockerTool
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseMcpServer", "DatabaseMcpServer\DatabaseMcpServer.csproj", "{57DB3BDF-25A6-4910-A819-ACA2CC5A0B72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentFrameworkMcpToolCallDatabase", "AgentFrameworkMcpToolCallDatabase\AgentFrameworkMcpToolCallDatabase.csproj", "{748A835F-9010-442E-8280-625D6AECE3A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{57DB3BDF-25A6-4910-A819-ACA2CC5A0B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57DB3BDF-25A6-4910-A819-ACA2CC5A0B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57DB3BDF-25A6-4910-A819-ACA2CC5A0B72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{748A835F-9010-442E-8280-625D6AECE3A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{748A835F-9010-442E-8280-625D6AECE3A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{748A835F-9010-442E-8280-625D6AECE3A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{748A835F-9010-442E-8280-625D6AECE3A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
