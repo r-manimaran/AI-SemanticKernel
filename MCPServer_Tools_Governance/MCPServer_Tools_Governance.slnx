@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="HttpMCPServerWithGovernance/HttpMCPServerWithGovernance.csproj" />
+  <Project Path="MCPClient_ConsoleApp/MCPClient_ConsoleApp.csproj" />
+</Solution>
